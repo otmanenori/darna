@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d2c">
+  <meta name="description" content="داري — أطباق منزلية وحلويات مغربية من مطابخ طانطان.">
+  <title>داري | مذاق الدار من طانطان</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="داري، الصفحة الرئيسية" data-i18n-attr="aria-label:brand.homeAria">
+      <span class="brand-emblem" aria-hidden="true"><svg viewBox="0 0 42 42"><path d="M21 4c-2 7-2 15-2 23m2-20C15 4 9 6 6 11c6 2 11 1 15-4m1 1c5-5 11-6 15-4-2 6-8 9-15 7m0 4c5-3 10-3 15 0-4 5-9 7-15 5m-2-8c-5-3-10-3-15 0 3 5 8 7 15 5M13 35h16m-13-5h10"/></svg></span>
+      <span class="brand-name">داري<small data-i18n="brand.tagline"><span data-i18n="brand.tagline">من بيوت طانطان</span></small></span>
+    </a>
+    <nav class="main-nav" aria-label="التنقل الرئيسي" data-i18n-attr="aria-label:nav.main">
+      <a class="active" href="#home" data-i18n="nav.home"><span data-i18n="makers.home">الرئيسية</span></a>
+      <a href="#market" data-i18n="nav.dishes">الأطباق</a>
+      <a href="#market" data-category-link="حلويات" data-i18n="nav.sweets">الحلويات</a>
+      <a href="#makers" data-i18n="nav.sellers">البائعات</a>
+      <a href="#tracking-form" data-i18n="nav.tracking">تتبّع الطلب</a>
+      <button class="nav-account" data-open="account" data-i18n="nav.account"><span data-i18n="nav.account">حسابي</span></button>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-button search-toggle" aria-label="ابحث عن طبق" title="بحث" data-i18n-attr="aria-label:nav.search,title:market.searchButton"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m16 16 4.2 4.2"/></svg></button>
+      <button class="icon-button favorite-open" aria-label="المفضلة" title="المفضلة" data-i18n-attr="aria-label:nav.favorites,title:nav.favorites"><svg viewBox="0 0 24 24"><path d="M20.4 8.7c0 5.3-8.4 10-8.4 10s-8.4-4.7-8.4-10a4.3 4.3 0 0 1 8.4-1.1 4.3 4.3 0 0 1 8.4 1.1Z"/></svg></button>
+      <button class="cart-button" id="cart-open" aria-label="سلة الطلبات" data-i18n-attr="aria-label:nav.cart"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.1 10.3a2 2 0 0 0 2 1.6h8.5a2 2 0 0 0 1.9-1.4L21 8H6"/><circle cx="9.5" cy="19" r="1"/><circle cx="17.5" cy="19" r="1"/></svg><span data-i18n="nav.cart"><span data-i18n="cart.title">سلة الطلبات</span></span><b id="cart-count">0</b></button>
+      <button class="account-button" data-open="account"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.3"/><path d="M5.5 20c.6-4 2.8-6 6.5-6s5.9 2 6.5 6"/></svg><span data-i18n="nav.account">حسابي</span></button>
+      <label class="language-picker"><span class="sr-only" data-i18n="language.label">لغة الموقع</span><select id="language-select" aria-label="لغة الموقع" data-i18n-attr="aria-label:language.label"><option value="ar">العربية</option><option value="fr">Français</option><option value="en">English</option></select></label>
+      <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false" data-i18n-attr="aria-label:nav.menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="hero-eyebrow"><span></span> <span data-i18n="hero.eyebrow">من مطابخ طانطان إلى مائدتك</span></p>
+        <h1 id="hero-title" data-i18n="hero.title" data-i18n-html>ريحة الصحراء،<br><em>ولمّة الدار.</em></h1>
+        <p data-i18n="hero.description">أطباق منزلية وحلويات مغربية تُحضّر بحبّ، وتجمع نكهات بيوت طانطان في سوق واحد.</p>
+        <div class="hero-actions"><a class="button button-green" href="#market"><span data-i18n="hero.browse"><span data-i18n="cart.browse">تصفّح الأطباق</span></span> <span>←</span></a><button class="hero-location city-open"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg><span><span data-i18n="hero.delivery">توصيل إلى</span> <b id="chosen-city"><span data-i18n="phone.taglineShort">طانطان</span></b></span><span class="caret">⌄</span></button></div>
+      </div>
+      <div class="hero-seal"><span class="seal-ring" data-i18n="hero.seal">مذاق</span><strong>داري</strong><small data-i18n="hero.seal.small">خبز الدار · قلب البلاد</small></div>
+      <div class="hero-caption"><span class="caption-line"></span><span data-i18n="hero.caption">طانطان · جنوب المغرب</span><b>28°00′N 11°06′W</b></div>
+      <div class="hero-scroll" aria-hidden="true"><span></span> <span data-i18n="hero.scroll">اكتشف السوق</span></div>
+    </section>
+
+    <section class="benefits" aria-label="مميزات داري" data-i18n-attr="aria-label:benefits.label">
+      <div class="benefit reveal"><span class="benefit-icon"><svg viewBox="0 0 28 28"><path d="M14 3 5 7v6c0 6 4 10 9 12 5-2 9-6 9-12V7z"/><path d="m10 14 3 3 6-7"/></svg></span><span><b data-i18n="benefit.authentic">أكل منزلي أصيل</b><small data-i18n="benefit.local">بأيادي محلية</small></span></div>
+      <div class="benefit reveal"><span class="benefit-icon"><svg viewBox="0 0 28 28"><circle cx="10" cy="9" r="4"/><path d="M2 23c0-5 3-8 8-8s8 3 8 8M20 6h6m-3-3v6m-3 9h6m-3-3v6"/></svg></span><span><b data-i18n="benefit.sellers">باعة من طانطان</b><small data-i18n="benefit.community">يدعم مطبخك الحيّ</small></span></div>
+      <div class="benefit reveal"><span class="benefit-icon"><svg viewBox="0 0 28 28"><path d="M3 9h15v12H3zM18 13h4l4 4v4h-8z"/><circle cx="8" cy="22" r="2"/><circle cx="22" cy="22" r="2"/></svg></span><span><b data-i18n="benefit.delivery">توصيل قريب</b><small data-i18n="benefit.fromKitchen">من المطبخ إلى بابك</small></span></div>
+      <div class="benefit reveal"><span class="benefit-icon"><svg viewBox="0 0 28 28"><path d="M14 3 4 11h3v13h14V11h3z"/><path d="M11 24v-8h6v8"/></svg></span><span><b data-i18n="benefit.easy">طلب سهل وآمن</b><small data-i18n="benefit.steps">خطوات بسيطة</small></span></div>
+    </section>
+
+    <section class="market-section" id="market" aria-labelledby="market-title">
+      <div class="market-heading"><div><p class="section-kicker"><span></span> <span data-i18n="market.eyebrow">من مطابخ طانطان</span></p><h2 id="market-title" data-i18n="market.title" data-i18n-html>أطباق اليوم <em>في طانطان</em></h2></div><p data-i18n="market.description">تصفّح النكهات، اختر طبقك، وخلي الباقي علينا.</p></div>
+      <div class="market-shell">
+        <aside class="order-sidebar">
+          <div class="order-card">
+            <div class="order-card-top"><span class="order-map-icon"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2"/></svg></span><span class="order-mini-label" data-i18n="market.sidebar.kicker">مذاق قريب منك</span></div>
+            <h3 data-i18n="market.sidebar.title" data-i18n-html>اطلب من بيوت<br>طانطان اليوم</h3>
+            <button class="delivery-select city-open"><span data-i18n="market.delivery">توصيل إلى</span><strong id="sidebar-city"><span data-i18n="phone.taglineShort">طانطان</span></strong><span>⌄</span></button>
+            <a class="button button-green full-button" href="#product-grid"><span data-i18n="hero.browse"><span data-i18n="cart.browse">تصفّح الأطباق</span></span> <span>←</span></a>
+            <div class="mini-landscape" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
+          <form class="tracking-card" id="tracking-form">
+            <div class="tracking-title"><svg viewBox="0 0 28 28"><path d="M2 9h15v12H2zM17 13h4l4 4v4h-8z"/><circle cx="7" cy="22" r="2"/><circle cx="21" cy="22" r="2"/><path d="M6 5h10"/></svg><h3 data-i18n="market.track">تتبّع طلبك</h3></div>
+            <label class="sr-only" for="tracking-code" data-i18n="market.orderNumber">رقم الطلب</label><input id="tracking-code" placeholder="أدخل رقم الطلب..." autocomplete="off" data-i18n-attr="placeholder:tracking.enter"><button type="submit" data-i18n="market.trackButton">تتبّع</button>
+            <small data-i18n="market.previewOnly">المعاينة لا تتصل بطلبات فعلية.</small>
+          </form>
+        </aside>
+
+        <div class="market-main">
+          <div class="browse-title"><h3 data-i18n="market.categories">تصفّح الأصناف</h3><span><span data-i18n="category.all">الكل</span> <b>21</b></span></div>
+          <div class="category-list" role="group" aria-label="تصفية حسب النوع" data-i18n-attr="aria-label:category.filterAria">
+            <button class="category-chip active" data-category="الكل" aria-pressed="true"><span class="category-icon all-icon"><i></i><i></i><i></i><i></i></span><b data-i18n="category.all">الكل</b></button>
+            <button class="category-chip" data-category="أطباق رئيسية" aria-pressed="false"><span class="category-icon pot-icon"><svg viewBox="0 0 36 36"><path d="M8 17h20v12H8zM5 17h26M14 13c0-2 2-2 2-4m5 4c0-2 2-2 2-4M18 7V4m-6 25v3m12-3v3"/></svg></span><b data-i18n="category.mains">أطباق رئيسية</b></button>
+            <button class="category-chip" data-category="حلويات" aria-pressed="false"><span class="category-icon sweet-icon"><svg viewBox="0 0 36 36"><path d="M8 20h20l-2 10H10zM7 20a11 11 0 0 1 22 0zM14 13q-3-4 1-7m5 7q-2-4 2-7"/></svg></span><b data-i18n="category.desserts"><span data-i18n="phone.desserts"><span data-i18n="makers.sweets">حلويات</span></span></b></button>
+            <button class="category-chip" data-category="فطور" aria-pressed="false"><span class="category-icon bread-icon"><svg viewBox="0 0 36 36"><path d="M7 21c0-6 4-11 11-11s11 5 11 11v8H7zM13 17l3 3m3-4 3 3m-7 6 3 3"/></svg></span><b data-i18n="category.breakfast">فطور ومخبوزات</b></button>
+          </div>
+          <form id="search-form" class="search-bar" role="search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.6"/><path d="m16 16 4.2 4.2"/></svg><label class="sr-only" for="product-search" data-i18n="market.searchLabel">ابحث عن طبق أو حلويات</label><input id="product-search" type="search" placeholder="ابحث عن طبق، حلويات أو مطبخ..." autocomplete="off" data-i18n-attr="placeholder:market.searchPlaceholder"><button type="submit" data-i18n="market.searchButton">بحث</button></form>
+          <div class="product-toolbar"><p><span data-i18n="market.suggested">الأطباق المقترحة</span> <span data-i18n="market.today">لهذا اليوم</span></p><button class="sort-button" id="sort-toggle"><span class="sort-label" data-i18n="market.sort.near">الأقرب إليك</span> <span>⌄</span></button></div>
+          <div class="product-grid" id="product-grid" aria-live="polite"></div>
+          <div class="empty-results" id="empty-results" hidden><p data-i18n="market.empty">لم نعثر على هذا الطبق حالياً.</p><button class="text-link reset-filter" data-i18n="market.reset">عرض كل الأطباق</button></div>
+          <p class="market-demo-note" data-i18n="market.demoNote">أسماء المطابخ والأسعار أمثلة للتصميم، ولا تمثل عروضاً فعلية.</p>
+          <div class="market-more"><span data-i18n="market.more">كل يوم نكهة جديدة من الحيّ</span><button class="text-link reset-filter"><span data-i18n="market.seeAll">شاهد جميع الأطباق</span> <span>←</span></button></div>
+        </div>
+
+        <aside class="phone-aside" aria-label="معاينة الهاتف" data-i18n-attr="aria-label:phone.aria">
+          <div class="phone-heading"><span class="phone-live-dot"></span><span><span data-i18n="phone.heading">داري معاك فين ما مشيتي</span></span></div>
+          <div class="phone-device">
+            <div class="phone-notch"><span></span></div>
+            <div class="phone-appbar"><span class="phone-menu">☰</span><span class="phone-brand">داري<small><span data-i18n="phone.taglineShort">طانطان</span></small></span><button id="phone-cart-open" aria-label="فتح السلة" data-i18n-attr="aria-label:phone.cart"><svg viewBox="0 0 24 24"><path d="M3 4h2l2 11h12l2-8H6"/><circle cx="9" cy="19" r="1"/><circle cx="17" cy="19" r="1"/></svg></button></div>
+            <div class="phone-intro"><small><span data-i18n="brand.tagline">من بيوت طانطان</span></small><h3><span data-i18n="phone.tagline">النكهة اللي كتفكّر بالدار</span></h3></div>
+            <div class="phone-filters"><button class="phone-filter active" data-category="الكل"><span>⌘</span><span data-i18n="category.all">الكل</span></button><button class="phone-filter" data-category="أطباق رئيسية"><span>♨</span><span data-i18n="phone.mainDishes"><span data-i18n="makers.mains">أطباق</span></span></button><button class="phone-filter" data-category="حلويات"><span>✿</span><span data-i18n="phone.desserts"><span data-i18n="makers.sweets">حلويات</span></span></button></div>
+            <div class="phone-product-feature" data-product-preview="tagine-prune"><img class="phone-food" src="assets/food/mains/kofta-tagine.jpg" alt="طاجين كفتة بالخضر" data-i18n-attr="alt:phone.nameAlt" loading="lazy"><div class="phone-product-copy"><small><span data-i18n="phone.maker">طبق من مطبخ للا فاطمة</span></small><b><span data-i18n="makers.meatballTagine">طاجين كفتة بالخضر</span></b><span>68 درهم</span></div></div>
+            <div class="phone-product-feature second" data-product-preview="vegetable-tagine"><img class="phone-food" src="assets/food/mains/vegetable-tagine-plate.jpg" alt="طاجين خضر الموسم" data-i18n-attr="alt:makers.seasonalTagine" loading="lazy"><div class="phone-product-copy"><small><span data-i18n="phone.seasonal">خضر الموسم</span></small><b><span data-i18n="makers.seasonalTagine">طاجين خضر الموسم</span></b><span>55 درهم</span></div></div>
+            <div class="phone-nav"><button data-open="account"><span>♙</span><span data-i18n="nav.account">حسابي</span></button><button data-open="courier"><span>♧</span><span data-i18n="phone.delivery">توصيل</span></button><button data-phone-market><span>▦</span><span data-i18n="phone.categories">الأقسام</span></button><button class="selected" data-phone-home><span>◆</span><span data-i18n="makers.home">الرئيسية</span></button></div>
+          </div>
+          <span class="phone-caption"><span data-i18n="phone.caption">نفس السوق، بحجم أصغر.</span></span>
+        </aside>
+      </div>
+    </section>
+
+    <section class="desert-ribbon" aria-label="داري من طانطان" data-i18n-attr="aria-label:ribbon.aria"><div class="ribbon-scene"></div><div class="ribbon-copy"><span><span data-i18n="ribbon.from">من طانطان</span></span><b><span data-i18n="ribbon.copy">نكهة المائدة المغربية الأصيلة</span></b><span class="ribbon-leaf">✳</span></div></section>
+
+    <section class="makers-section" id="makers" aria-labelledby="makers-title">
+      <div class="dashboard-heading"><div><p class="section-kicker"><span></span> <span data-i18n="makers.eyebrow">مساحات داري</span></p><h2 id="makers-title" data-i18n="makers.title" data-i18n-html>لكل مطبخ <em>حكايته</em></h2></div><p><span data-i18n="makers.description">سوق واحد يجمع أهل المطبخ وأهل التوصيل واللي كيسهروا على الجودة.</span></p></div>
+      <div class="dashboard-grid">
+        <article class="dashboard-card seller-dash reveal">
+          <div class="dash-rail"><span class="dash-user-mark">ل</span><b>داري</b><span class="dash-active"><span data-i18n="makers.home">الرئيسية</span></span><span><span data-i18n="makers.products">منتجاتي</span></span><span><span data-i18n="makers.orders">الطلبات</span></span><span><span data-i18n="makers.stats">الإحصائيات</span></span><span><span data-i18n="makers.profile">ملفي الشخصي</span></span><button data-open="seller-dashboard"><span data-i18n="makers.open">فتح اللوحة</span> <i>←</i></button></div>
+          <div class="dash-screen"><div class="dash-screen-head"><div><small><span data-i18n="makers.sellerSpace">مساحة البائعات</span></small><h3><span data-i18n="makers.cookName">مطبخ للا فاطمة</span></h3></div><button data-open="seller"><span data-i18n="makers.addDish">+ أضف طبقاً</span></button></div><div class="dash-tabs"><span class="selected"><span data-i18n="makers.allDishes">كل الأطباق</span></span><span><span data-i18n="phone.mainDishes"><span data-i18n="makers.mains">أطباق</span></span></span><span><span data-i18n="phone.desserts"><span data-i18n="makers.sweets">حلويات</span></span></span></div><div class="seller-row"><img class="seller-row-image" src="assets/food/mains/vegetable-tagine-plate.jpg" alt=""><b><span data-i18n="makers.seasonalTagine">طاجين خضر الموسم</span></b><span>55 <span data-i18n="currencyShort">د.م</span></span><i><span data-i18n="makers.active">نشط</span></i></div><div class="seller-row"><img class="seller-row-image" src="assets/food/mains/kofta-tagine.jpg" alt=""><b><span data-i18n="makers.meatballTagine">طاجين كفتة بالخضر</span></b><span>68 <span data-i18n="currencyShort">د.م</span></span><i><span data-i18n="makers.active">نشط</span></i></div><div class="seller-row"><img class="seller-row-image" src="assets/food/desserts/moroccan-pastries-plate.jpg" alt=""><b><span data-i18n="makers.assortedPastries">حلويات مغربية مشكلة</span></b><span>35 <span data-i18n="currencyShort">د.م</span></span><i><span data-i18n="makers.draft">مسودة</span></i></div></div>
+        </article>
+        <article class="dashboard-card courier-dash reveal">
+          <div class="dash-rail courier-rail"><span class="dash-user-mark">ط</span><b>داري</b><span><span data-i18n="makers.home">الرئيسية</span></span><span class="dash-active"><span data-i18n="makers.availableOrders">الطلبات المتاحة</span></span><span><span data-i18n="makers.deliveryMap">خريطة التوصيل</span></span><span><span data-i18n="makers.earnings">الأرباح</span></span><span><span data-i18n="makers.registration">التسجيل والبيانات</span></span><button data-open="courier"><span data-i18n="makers.open">فتح اللوحة</span> <i>←</i></button></div>
+          <div class="dash-screen courier-screen"><div class="dash-screen-head"><div><small><span data-i18n="makers.deliverySpace">مساحة التوصيل</span></small><h3><span data-i18n="makers.nearbyOrders">طلبات قريبة منك</span></h3></div><span class="status-pill"><span data-i18n="makers.available">متاح</span></span></div><div class="route-map"><span class="map-road road-a"></span><span class="map-road road-b"></span><span class="map-road road-c"></span><span class="map-pin pin-a">●</span><span class="map-pin pin-b">●</span><span class="route-line"></span></div><div class="delivery-preview"><span class="delivery-status"><span data-i18n="makers.onWay">في الطريق</span></span><b><span data-i18n="makers.previewOrder">طلب #4587</span></b><small><span data-i18n="makers.cityCenter">طانطان · وسط المدينة</span></small><div><strong>62 <span data-i18n="currency">درهم</span></strong><button data-open="courier"><span data-i18n="makers.details">تفاصيل</span> <i>←</i></button></div></div></div>
+        </article>
+      </div>
+      <p class="dashboard-note"><span data-i18n="makers.dashboardNote">هذه اللوحات معاينة تصميمية ببيانات فارغة. الأسماء والأسعار المعروضة أمثلة.</span></p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#home" aria-label="داري، الصفحة الرئيسية" data-i18n-attr="aria-label:brand.homeAria"><span class="brand-emblem"><svg viewBox="0 0 42 42"><path d="M21 4c-2 7-2 15-2 23m2-20C15 4 9 6 6 11c6 2 11 1 15-4m1 1c5-5 11-6 15-4-2 6-8 9-15 7m0 4c5-3 10-3 15 0-4 5-9 7-15 5m-2-8c-5-3-10-3-15 0 3 5 8 7 15 5M13 35h16m-13-5h10"/></svg></span><span class="brand-name">داري<small><span data-i18n="brand.tagline">من بيوت طانطان</span></small></span></a><p><span data-i18n="footer.tagline">مذاق الدار، من طانطان إلى مائدتك.</span></p><span><span data-i18n="footer.copy">© داري 2026</span></span></footer>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="side-panel" id="cart-panel" aria-label="سلة المشتريات" data-i18n-attr="aria-label:cart.aria" aria-hidden="true"><div class="panel-heading"><div><p class="section-kicker"><span data-i18n="cart.kicker">اختياراتك من داري</span></p><h2><span data-i18n="cart.title">سلة الطلبات</span> <span id="panel-cart-count">(0)</span></h2></div><button class="close-button" aria-label="إغلاق" data-i18n-attr="aria-label:cart.close">×</button></div><div class="cart-lines" id="cart-lines"></div><div class="cart-empty" id="cart-empty"><span class="empty-mark">د</span><h3><span data-i18n="cart.empty.title">سلتك تنتظر طبقك المفضّل</span></h3><p><span data-i18n="cart.empty.description">اختر طبقاً من مطبخ طانطان وأكمل طلبك هنا.</span></p><button class="button button-green close-panel"><span data-i18n="cart.browse">تصفّح الأطباق</span></button></div><div class="cart-summary" id="cart-summary" hidden><p><span><span data-i18n="cart.total">المجموع</span></span><b id="cart-total">0 درهم</b></p><button class="button button-green checkout-button"><span data-i18n="cart.checkout">أكمل الطلب</span> <span>←</span></button><small><span data-i18n="cart.codNote">الدفع نقداً عند الاستلام بعد موافقة أحد الباعة.</span></small></div></aside>
+  <dialog class="modal" id="modal"><button class="close-button modal-close" aria-label="إغلاق" data-i18n-attr="aria-label:cart.close">×</button><div id="modal-content"></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

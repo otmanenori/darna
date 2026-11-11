@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="رسم أصلي لطبق كسكس بالخضر">
+ <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#d6d9bc"/><stop offset="1" stop-color="#94a17a"/></linearGradient><radialGradient id="plate"><stop stop-color="#fffaf0"/><stop offset="1" stop-color="#dacbaa"/></radialGradient></defs>
+ <rect width="900" height="700" fill="url(#bg)"/><circle cx="750" cy="110" r="190" fill="#f2e4be" opacity=".42"/><path d="M0 540Q170 480 355 528T900 506V700H0Z" fill="#62744f" opacity=".4"/>
+ <ellipse cx="452" cy="468" rx="325" ry="138" fill="#3a4b34" opacity=".22"/><ellipse cx="450" cy="425" rx="330" ry="139" fill="url(#plate)"/><ellipse cx="450" cy="419" rx="250" ry="93" fill="#d2a45e"/>
+ <g fill="#e8c77e"><circle cx="354" cy="414" r="18"/><circle cx="393" cy="389" r="16"/><circle cx="435" cy="422" r="19"/><circle cx="482" cy="394" r="17"/><circle cx="526" cy="427" r="18"/><circle cx="562" cy="395" r="15"/><circle cx="382" cy="448" r="15"/><circle cx="471" cy="451" r="15"/><circle cx="531" cy="456" r="14"/><circle cx="425" cy="365" r="14"/></g>
+ <g fill="#a95032"><path d="M343 391l27-58 23 57z"/><path d="M527 389l30-57 22 61z"/><path d="M412 447l30-56 22 62z"/></g><g fill="#788951"><path d="M386 368q-19-49 8-67 32 22 8 69z"/><path d="M493 372q-3-50 32-57 23 35-14 67z"/><path d="M558 443q26-39 53-21-5 42-50 39z"/></g><g fill="#eed68f"><circle cx="450" cy="398" r="23"/><circle cx="503" cy="432" r="16"/></g>
+ <path d="M193 550Q452 610 707 550" fill="none" stroke="#fffaf0" stroke-width="8" opacity=".7"/>
+</svg>

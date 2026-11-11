@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700" role="img" aria-label="رسم أصلي لحلويات مغربية بالعسل">
+ <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#dfc6ab"/><stop offset="1" stop-color="#b98765"/></linearGradient><radialGradient id="plate"><stop stop-color="#fff8e9"/><stop offset="1" stop-color="#e9d8ba"/></radialGradient></defs>
+ <rect width="900" height="700" fill="url(#bg)"/><circle cx="170" cy="110" r="160" fill="#f3e2c8" opacity=".45"/><path d="M0 522Q180 466 380 520T900 480V700H0Z" fill="#89543f" opacity=".23"/>
+ <ellipse cx="450" cy="466" rx="327" ry="134" fill="#6f4734" opacity=".22"/><ellipse cx="450" cy="424" rx="325" ry="136" fill="url(#plate)"/><ellipse cx="450" cy="421" rx="260" ry="99" fill="#bd8053"/>
+ <g fill="#c9753e" stroke="#a7522d" stroke-width="6"><path d="M293 400l70-82 71 82-71 81z"/><path d="M414 397l73-85 71 85-73 82z"/><path d="M535 402l66-78 69 78-69 78z"/></g>
+ <g fill="none" stroke="#f3c77d" stroke-width="9"><path d="M326 399l37-44 39 44-39 45z"/><path d="M448 397l39-46 39 46-39 47z"/><path d="M567 402l34-41 35 41-35 42z"/></g><g fill="#f4dfad"><circle cx="365" cy="400" r="7"/><circle cx="487" cy="398" r="7"/><circle cx="601" cy="403" r="7"/></g>
+ <path d="M213 556Q450 611 692 553" fill="none" stroke="#fff8e9" stroke-width="8" opacity=".7"/><g fill="#66804f"><ellipse cx="218" cy="387" rx="35" ry="14" transform="rotate(-34 218 387)"/><ellipse cx="684" cy="456" rx="34" ry="13" transform="rotate(31 684 456)"/></g>
+</svg>
